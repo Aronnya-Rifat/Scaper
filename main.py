@@ -220,8 +220,8 @@ print(f"✅ Scraping completed! Results saved to {output_csv}")
 
 # === 🔹 CONFIGURATION ===
 CREDENTIALS_FILE = SERVICE_ACCOUNT_FILE
-SPREADSHEET_ID = "1lHnsqMM94omtG_WcXhixVPluETrFtZBcRJ-Hpdag5mM"
-SHEET_NAME = "redfin_2025-03-01-22-36-12"
+SPREADSHEET_ID = "1TnpgFie1zVC-9CwMNxy6tKZxDIb47Wyc-K_DD43gvfE"
+SHEET_NAME = "DO NOT TOUCH"
 CSV_FILE = "redfin.csv"
 
 # === 🔹 Authenticate and Access Google Sheets ===
