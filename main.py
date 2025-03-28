@@ -21,11 +21,11 @@ from webdriver_manager.chrome import ChromeDriverManager
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
-
+import json
 
 # === Google Drive Upload Config ===
 FOLDER_ID = "1j6ereb-p1zk22QZ_cg_xxBVcwU0pK3b9"
-SERVICE_ACCOUNT_FILE = "/app/festive-avenue-452901-a8-787f4b9542be.json"  # change this if running locally
+SERVICE_ACCOUNT_FILE = json.loads(os.environ("GOOGLE_CREDENTIALS"))  # change this if running locally
 SCOPES = ['https://www.googleapis.com/auth/drive.file']
 
 # === Download Directory (for Render use /tmp) ===
@@ -219,7 +219,7 @@ print(f"✅ Scraping completed! Results saved to {output_csv}")
 
 
 # === 🔹 CONFIGURATION ===
-CREDENTIALS_FILE = "festive-avenue-452901-a8-787f4b9542be.json"
+CREDENTIALS_FILE = SERVICE_ACCOUNT_FILE
 SPREADSHEET_ID = "1lHnsqMM94omtG_WcXhixVPluETrFtZBcRJ-Hpdag5mM"
 SHEET_NAME = "redfin_2025-03-01-22-36-12"
 CSV_FILE = "redfin.csv"
