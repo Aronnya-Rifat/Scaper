@@ -31,7 +31,7 @@ RUN curl -fsSL https://dl.google.com/linux/direct/google-chrome-stable_current_a
     && rm chrome.deb
 
 # Set working directory
-WORKDIR /app
+WORKDIR /origin
 
 # Copy project files
 COPY . .
