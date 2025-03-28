@@ -55,7 +55,8 @@ def get_latest_file(path):
 
 # === Set Chrome Options ===
 chrome_options = Options()
-chrome_options.add_argument("--headless=new")  # Headless for server
+chrome_options.add_argument("--headless")
+chrome_options.add_argument("--start-maximized")# Headless for server
 chrome_options.add_argument("--no-sandbox")
 chrome_options.add_argument("--disable-dev-shm-usage")
 chrome_options.add_argument("--disable-blink-features=AutomationControlled")
@@ -80,6 +81,7 @@ driver = webdriver.Chrome(service=service, options=chrome_options)
 # === Redfin URL ===
 url = "https://www.redfin.com/county/1647/MO/Jackson-County/filter/property-type=house,max-price=200k,min-beds=2,min-sqft=750-sqft,hoa=0,viewport=39.23710209353751:38.83281595697974:-94.10456377540925:-94.60859637048101"
 driver.get(url)
+driver.set_page_load_timeout(30)
 wait = WebDriverWait(driver, 20)
 
 try:
