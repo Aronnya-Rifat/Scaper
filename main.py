@@ -25,7 +25,7 @@ import json
 
 # === Google Drive Upload Config ===
 FOLDER_ID = "1j6ereb-p1zk22QZ_cg_xxBVcwU0pK3b9"
-SERVICE_ACCOUNT_FILE = json.loads(os.environ("GOOGLE_CREDENTIALS"))  # change this if running locally
+SERVICE_ACCOUNT_FILE = json.loads(os.environ["GOOGLE_CREDENTIALS"])  # change this if running locally
 SCOPES = ['https://www.googleapis.com/auth/drive.file']
 
 # === Download Directory (for Render use /tmp) ===
